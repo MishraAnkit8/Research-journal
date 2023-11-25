@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-{% load static %}
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -22,19 +21,18 @@
 <div class="container-fluid" style="background-color:orange;border-radius:10px;width:60%;margin-top:10%;">
 
   <div class="row" style="height:500px;">
-    <div class="col-md-5" align="center" style="color:white;margin-top:15%">
-        <h3>OMRS</h3>
+    <div class="col-md-5"  style="color:white;margin-top:15%;">
+        <h3>RESEARCH Journal</h3>
         <p>Welcome to Admin Panel.</p>
         <p style="margin-top:5%">
          </p>
-        <a href="{% url 'home' %}">>> Back/home</button></a>
+        <a href="index">>> Back/home</button></a>
     </div>
     <div class="col-md-7" style="background-color:white;padding:40px">
 <h3 style="margin-top:5%;margin-bottom:6%">Signin to Your Account</h3>
       <form method="post" action="">
-    {% csrf_token %}
   <div class="form-group">
-    <label for="exampleInputEmail1" style="margin-bottom:5%;font-type:bold">Username</label>
+    <label for="exampleInputEmail1" style="margin-bottom:5%;font-size:bold">Username</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="uname" placeholder="Enter Username">
   </div>
   <div class="form-group">
