@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN - Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="image/images.jpg" />
+    <link rel="stylesheet" type="text/css" href="CSS/simpleAlert.css">
+    <link rel="stylesheet" type="text/css" href="CSS/bs.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            font-size: 17px;
+        }
+
+        .container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container img {
+            vertical-align: middle;
+        }
+
+        .container .content {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            /* Fallback color */
+            background: rgba(0, 0, 0, 0.5);
+            /* Black background with 0.5 opacity */
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        div.transparentbox {
+            margin-top: 4%;
+            width: 90%;
+
+            height: 470px;
+
+            background-color: white;
+
+            border: 1px solid;
+
+            border-color: #CD853F;
+
+            opacity: 0.8;
+
+            filter: alpha(opacity=60);
+
+        }
+
+        div.transparentbox1 {
+            margin-top: 7%;
+            width: 100%;
+            opacity: 1.9;
+            height: 370px;
+
+            background-color: black;
+
+            border: 3px solid;
+
+            border-color: black;
+        }
+
+        body {
+            background-image: url('/images/Research-journal.JPEG');
+            /* Add other styling if needed */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" align="center" style="margin-top:6%">
+        <span>
+            <button id="adminBtn" class="btn btn-success" style="width:200px;font-size:20px;height:50px;">Admin</button>
+            <button id="userBtn" class="btn btn-success" style="width:200px;font-size:20px;height:50px;">User</button>
+        </span>
+    </div>
+    <h1 align="center" style="color:white;font-weight:bold;font-size:40px;margin-top:2%">RESEARCH JOURNAL PROJECT</h1>
+
+    <div class="container" align="center">
+        <div class="transparentbox">
+            <div class="row">
+                <div class="container transparentbox1" style="width:70%;">
+                    <img src= 'Images/Research-journal.JPEG' style="width:100%">
+                    <p style="margin-top:4%;font-size:20px;text-align:center;color:white;font-weight:bold">We are
+                        launching the most awesome site ever.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('adminBtn').addEventListener('click', function () {
+            redirectToLogin('/login_admin');
+        });
+    
+        document.getElementById('userBtn').addEventListener('click', function () {
+            redirectToLogin('/login');
+        });
+    
+        function redirectToLogin(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
