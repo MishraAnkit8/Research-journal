@@ -1,0 +1,231 @@
+
+<aside class="left-sidebar " id="leftSideBar">
+    <div class="left-sidebar-logo">
+        <a href="<%- BASE_URL %>dashboard">
+            <img src="<%- BASE_URL %>image/logo-nmims.png" class="nmims-logo" />
+        </a>
+        <!-- This is left sidebar content -->
+    </div>
+    <ul class="offset-list offcanvas-body p-0 sidebar-body" id="left-sidebar-accordion">
+        <a href="<%- BASE_URL %>dashboard" class="offset-list-item-link">
+            <li class="px-4">
+                <img src="<%- BASE_URL %>image/dashboard.png" class="ps-3 pe-2 sidebar-icon"> Dashboard
+            </li>
+        </a>
+        <!-- research -->
+        <li>
+            <div type="button" class="mx-auto " data-target="#research-left" data-toggle="collapse"
+            aria-expanded="true" style="display: flex; justify-content: baseline; padding-right: 60px;">
+                <img src="<%- BASE_URL %>image/Research.png" class="ps-3 pe-2 sidebar-icon">
+                <span > Research</span>
+                <span  class="mx-auto drop-list"><i  class="fa-solid fa-caret-down" data-target="#collapse" data-toggle="collapse"
+                        aria-expanded="true"></i></span>
+            </div>
+            <div class="collapse" id="research-left">
+                <ul class="nav flex-column ml-4">
+                    <li class="px-4" >
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/journal-paper">
+                            <!-- <img src="<%- BASE_URL %>image/Research.png" class="ps-3 pe-2 icon"> -->
+                            Journal Articles Published
+                        </a>
+                    </li>
+                    <li class="px-4">
+                        <div class="d-flex p-1 mt-1 ">
+                            <span type="button" class="mx-auto " data-target="#collapse1" data-toggle="collapse"
+                            aria-expanded="true" style="display: flex; justify-content: baseline; padding-right: 60px;"> Book Publications </span>
+                            <span class="mx-auto drop-list"><i id="dropdown-icon2" class="fa-solid fa-caret-down" data-target="#collapse1"
+                                    data-toggle="collapse" aria-expanded="true"></i></span>
+                        </div>
+                        <div class="collapse" id="collapse1">
+                            <ul class="nav flex-column ml-2">
+                                <li class="px-4">
+                                    <a class="offset-list-item-link research-link"
+                                        href="<%- BASE_URL %>research/book-publication-main/book-publication">
+                                        Book Publications
+                                    </a>
+                                </li>
+
+                                <li class="px-4">
+                                    <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/book-publication-main/book-publication">
+                                        Edited Book Publications
+                                    </a>
+                                </li>
+                                <li class="px-4">
+                                    <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/book-publication-main/book-publication">
+                                        Book Chapter Publication
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/conference-publication">
+                            <!-- <img src="<%- BASE_URL %>image/conference.png" class="ps-3 pe-2 icon"> -->
+                            Conference Presentations
+                        </a>
+                    </li>
+        
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/patent-submission">
+                            <!-- <img src="<%- BASE_URL %>image/submission-grant.png" class="ps-3 pe-2 icon"> -->
+                            Patent Submissions and Grant
+                        </a>
+                    </li>
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/research-project-grant">
+                            <!-- <img src="<%- BASE_URL %>image/consultancy.png" class="ps-3 pe-2 icon"> -->
+                            Research Projects
+                        </a>
+                    </li>
+                    <!-- //IPR -->
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/IPR">
+                            <!-- <img src="<%- BASE_URL %>image/consultancy.png" class="ps-3 pe-2 icon"> -->
+                            IPR
+                        </a>
+                    </li>
+
+                     <!-- research award -->
+                     <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/research-award">
+                            <!-- <img src="<%- BASE_URL %>image/consultancy.png" class="ps-3 pe-2 icon"> -->
+                            Research Award
+                        </a>
+                    </li>
+
+                     <!-- E content Development  -->
+                     <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/e-content">
+                            <!-- <img src="<%- BASE_URL %>image/consultancy.png" class="ps-3 pe-2 icon"> -->
+                           E-Content Development
+                        </a>
+                    </li>
+                    
+
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/research-seminar">
+                            <!-- <img src="<%- BASE_URL %>image/meeting.png" class="ps-3 pe-2 icon"> -->
+                            Research Seminars at NMIMS
+                        </a>
+                    </li>
+        
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/case-study">
+                            <!-- <img src="<%- BASE_URL %>image/study.png" class="ps-3 pe-2 icon"> -->
+                            Case Study
+                        </a>
+                    </li>
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/nmims-consultancy-approval-form">
+                            <!-- <img src="<%- BASE_URL %>image/study.png" class="ps-3 pe-2 icon"> -->
+                            NMIMS Consultancy Form
+                        </a>
+                    </li>
+                    <!-- nmims-seed-grant-non-pharmacy -->
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/nmims-seed-grant-non-pharmacy">
+                            <!-- <img src="<%- BASE_URL %>image/study.png" class="ps-3 pe-2 icon"> -->
+                            NMIMS Seed Grant Non-pharmacy
+                        </a>
+                    </li>
+
+                       <!-- pharmacy-seed-grant-form -->
+                       <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>research/pharmacy-seed-grant-form">
+                            <!-- <img src="<%- BASE_URL %>image/study.png" class="ps-3 pe-2 icon"> -->
+                            Pharmacy Seed Grant Form
+                        </a>
+                    </li>
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>teaching-excellance">
+                            <!-- <img src="<%- BASE_URL %>image/study.png" class="ps-3 pe-2 icon"> -->
+                            Teaching Excellence
+                        </a>
+                    </li>
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>meeting-stackholders">
+                            <!-- <img src="<%- BASE_URL %>image/study.png" class="ps-3 pe-2 icon"> -->
+                            Meeting Stakeholders
+                        </a>
+                    </li>
+
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="<%- BASE_URL %>branding-advertising">
+                            <!-- <img src="<%- BASE_URL %>image/study.png" class="ps-3 pe-2 icon"> -->
+                            Branding & Advertising
+                        </a>
+                    </li>
+
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="">
+                            <!-- <img src="<%- BASE_URL %>image/study.png" class="ps-3 pe-2 icon"> -->
+                            Research Incentive page
+                        </a>
+                    </li>
+
+                    <!-- SBM Incentive Policy -->
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="">
+                            <!-- <img src="<%- BASE_URL %>image/study.png" class="ps-3 pe-2 icon"> -->
+                            SBM Incentive Policy
+                        </a>
+                    </li>
+                    <!-- Other School Incentive Policy -->
+                    <li class="px-4">
+                        <a class="offset-list-item-link research-link" href="">
+                            <!-- <img src="<%- BASE_URL %>image/study.png" class="ps-3 pe-2 icon"> -->
+                            Other School Incentive Policy
+                        </a>
+                    </li>
+        
+                </ul>
+            </div>
+        </li>
+
+
+        <!-- <a href="<%- BASE_URL %>teaching-excellance" class="offset-list-item-link">
+            <li>
+                <img src="<%- BASE_URL %>image/excellence.png" class="ps-3 pe-2 sidebar-icon">Teaching Excellence
+            </li>
+        </a>
+        <a href="<%- BASE_URL %>meeting-stackholders" class="offset-list-item-link">
+            <li><img src="<%- BASE_URL %>image/meeting.png" class="ps-3 pe-2 sidebar-icon"> Meeting Stakeholders</li>
+        </a> -->
+        <!-- <a href="<%- BASE_URL %>branding-advertising" class="offset-list-item-link">
+            <li><img src="<%- BASE_URL %>image/advertising.png" class="ps-3 pe-2 sidebar-icon">
+                Branding & Advertising
+            </li>
+        </a> -->
+        <!-- <a href="#" class="offset-list-item-link">
+            <li><img src="<%- BASE_URL %>image/incentive.png" class="ps-3 pe-2 sidebar-icon"> Research Incentive page
+            </li>
+        </a>
+        <a href="#" class="offset-list-item-link">
+            <li><img src="<%- BASE_URL %>image/policy.png" class="ps-3 pe-2 sidebar-icon">
+                SBM Incentive Policy
+            </li>
+        </a>
+        <a href="#" class="offset-list-item-link">
+            <li><img src="<%- BASE_URL %>image/school.png" class="ps-3 pe-2 sidebar-icon">
+                Other School Incentive Policy
+            </li>
+        </a> -->
+
+        <a href="<%- BASE_URL %>chronicle-edition" class="offset-list-item-link">
+            <li><img src="<%- BASE_URL %>image/edition.png" class="ps-3 pe-2 sidebar-icon">
+                Chronicle Edition
+            </li>
+        </a>
+        <a href="../html/SampleAnalysis.html" class="offset-list-item-link">
+            <li><img src="<%- BASE_URL %>image/analysis.png" class="ps-3 pe-2 sidebar-icon">Sample Analysis
+            </li>
+        </a>
+        <a href="../html/SampleAnalysis.html" class="offset-list-item-link">
+            <li><img src="<%- BASE_URL %>image/logout.png" class="ps-3 pe-2 sidebar-icon">Logout</li>
+        </a>
+    </ul>
+</aside>
+
+
+

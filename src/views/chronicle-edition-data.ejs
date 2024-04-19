@@ -1,0 +1,64 @@
+<%- include('./partials/head') %>
+<title>chronicle edition</title>
+<style>
+    .custom-background{
+        background-color: #b7d1eb;
+    }
+    .list-item {
+    list-style-type: disc;
+  }
+
+  .text-content * {
+    background-color: #b7d1eb !important;
+  }
+
+  .text-date *{
+    font-size: 20px;
+    font-weight: 12px;
+  }
+  
+
+  figure {
+  max-width: 100%;
+  height: auto;
+  padding: auto;
+}
+
+figure * {
+  max-width: 100%;
+  height: auto;
+  padding: auto;
+}
+  /* ul * {
+    background-color: #b7d1eb 
+  } */
+</style>
+</head>
+<body>
+    <div class="row justify-content-center">
+        <div class="col-md-6 chronicle-body text-center pt-3 custom-background">
+            <img class="img-fluid" src="<%- BASE_URL %>image/nmims.png" alt="nmims image">
+            <div class="pt-5">
+                <ul class="text-content">
+                    <% if (viewDataById) { %>
+                        <li class="list-item">
+                            <%- viewDataById %>
+                        </li>
+                    <% } else { %>
+                        <li class="list-item">
+                            No data available
+                        </li>
+                    <% } %>
+                </ul>                               
+                <div class="container text-start">
+                    <div class="lead text-start fs-4 fw-bold">© NMIMS Deemed-to-be University</div>
+                    <small class="text-start">Mumbai | Shirpur | Bengaluru | Hyderabad | Indore | Navi Mumbai |
+                        Dhule | Chandigarh</small>
+                    <div class="text-start"><a href="https://www.nmims.edu">www.nmims.edu</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script></script>
+</body>
+</html>
