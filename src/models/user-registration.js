@@ -36,3 +36,16 @@ module.exports.loginRequest = async (loginId, facultyPassword) => {
         };
       });
 };
+
+
+module.exports.sessionInfo = async (username, accesstoken, refreshtoken, devicetoken, sessiontoken) =>{
+  const sql = {
+    text: `INSERT INTO user_session(username, accesstoken, refreshtoken, devicetoken, sessiontoken)
+          VALUES ($1, $2, $3, $4, $5)
+              RETURNING id;`,
+    values: [username,accesstoken,refreshtoken,devicetoken,sessiontoken]
+  };
+
+  let sessionId = await researchDbR.query(sql);
+  return sessionId.rows[0].id;
+}

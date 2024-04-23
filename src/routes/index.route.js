@@ -8,6 +8,8 @@ const brandingAndAdvertisingRoute = require('./branding-advertising.route');
 const chronicleRoutes = require('./chronicle-edition.route');
 const chroniclePageRoutes = require('./chronicle-page-routes');
 const userRegistrationRoutes = require('./user-registration.routes');
+const { asyncErrorHandler } = require('../middleware/error.middleware');
+const { authMiddleware } = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
@@ -18,6 +20,6 @@ router.use('/meeting-stackholders' , meetingStackholdersRoute);
 router.use('/branding-advertising' , brandingAndAdvertisingRoute);
 router.use('/chronicle-edition' , chronicleRoutes);
 router.use('/chronicle-page' , chroniclePageRoutes);
-router.use('/user-registration' , userRegistrationRoutes);
+router.use('/login-page' , userRegistrationRoutes);
 
 module.exports = router;

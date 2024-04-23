@@ -10,6 +10,9 @@ const { validateResearchSeminar } = require('../middleware/express-validator/res
 //middleware for download file
 const downloadFileService = require('../middleware/download-file.middleware');
 
+//logger file middle ware 
+const { authMiddleware } = require('../middleware/authMiddleware');
+
 // controllers
 const researchController = require('../controllers/research.controller');
 const caseStudyController = require('../controllers/case-study.controller');
@@ -41,8 +44,8 @@ const router = express.Router();
 router.get('/', asyncErrorHandler(researchController.renderResearch));
 
 //journal paper 
-router.get('/journal-paper', asyncErrorHandler(journalController.renderJournalPaper));
-router.post('/journal-paper/insert', upload.array('articlesDocuments', 5), asyncErrorHandler(journalController.insertJournalPapperDetails));
+router.get('/journal-paper',asyncErrorHandler(authMiddleware), asyncErrorHandler(journalController.renderJournalPaper));
+router.post('/journal-paper/insert', upload.array('articlesDocuments', 5), asyncErrorHandler(authMiddleware), asyncErrorHandler(journalController.insertJournalPapperDetails));
 router.post('/journal-paper/update', upload.array('articlesDocuments', 5), asyncErrorHandler(journalController.updateJournalPaper));
 router.post('/journal-paper/delete', asyncErrorHandler(journalController.delJournalPaper));
 router.post('/journal-paper/view', asyncErrorHandler(journalController.viewJournalPaper));
