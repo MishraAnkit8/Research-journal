@@ -1,0 +1,213 @@
+<%- include('./partials/head') %>
+<!-- inline css -->
+<!-- Navbar section -->
+
+<style>
+   body{
+      background-color: whitesmoke;
+      padding:0;
+      margin:0;
+   }
+ .maindiv{
+   display:flex;
+   justify-content: center;
+   margin-top:80px;
+   box-sizing: border-box;
+   width:100vw;
+   margin-bottom: 130px;
+  }
+ .innerdiv{
+    background-color: white;
+    box-shadow:0 0 10px lightgrey;
+    border-radius:20px;
+    /* margin-bottom:30%; */
+    overflow: hidden;
+    position: fixed;
+  }
+ input{
+    border:0;
+    border-bottom: solid black 2px;
+   width:100%;
+ }
+ input:focus{
+   outline: none;
+ }
+ h1{
+font-family: 'Lilita One', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+position: absolute;
+top:20px;
+ }
+ i{
+    font-size:20px;
+    padding-right:10px;
+ }
+ a{
+font-family: 'Lilita One', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; 
+ }
+ #errormessage{
+   display:flex;
+   justify-content: center;
+   background-color: red;
+   visibility: hidden;
+ }
+ span{
+  font-size:20px;
+  font-family: 'Lilita One', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  text-align:center;
+  padding:5px;
+  color:white;
+  font-weight:bold;
+  width:100%;
+ }
+ #closebutton{
+  color:white;
+  background-color: red;
+  margin-right:20px;
+  border:0;
+ }
+ #closebutton:focus{
+  outline: none;
+ }
+
+</style>   
+</head>
+<body>
+
+    <div id="errormessage">
+        <span id="displayMessage">
+        </span>
+        <button class="fa fa-close" id="closebutton" style="font-size:24px"></button>
+    </div>
+
+    <div class="row maindiv">
+
+        <div style="display:flex;" class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 innerdiv">
+
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                <img style="position: relative;width:25%; left:10px; padding-bottom:20px;"
+                    src="<%- BASE_URL %>image/logo-nmims-prod.png" /></br>
+                <img style="position: relative;width:80%; left:10px;"
+                    src="<%- BASE_URL %>image/login-animate-nmims.svg" />
+            </div>
+
+            <div style="position:relative;right:60px;" class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                <h1 style="width:20%;">Welcome</h1>
+
+                <div style="margin-top:25%;" class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+
+                    <form>
+                        <!-- Email input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <i class="fi fi-rr-user"></i><input name="userd-id" id="userd-id"
+                                style="margin-bottom:40px;width:66%;" placeholder="LoginId" type="text" /></br>
+                        </div>
+
+                        <!-- Password input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <i class="fi fi-rr-user"></i><input id="password" name="password"
+                                style="margin-bottom:40px;width:66%;" placeholder="password" type="text" /></br>
+                        </div>
+                        <!-- 2 column grid layout for inline styling -->
+                        <div class="row mb-4">
+                            <div class="col d-flex justify-content-center">
+                                <!-- Checkbox -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="form2Example31"
+                                        checked />
+                                    <label class="form-check-label" for="form2Example31"> Remember me </label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <!-- Simple link -->
+                                <a href="#!">Forgot password?</a>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button style="margin-bottom:40px;width:80%;" type="button" data-mdb-button-init
+                            data-mdb-ripple-init class="btn btn-primary btn-block mb-4" id="login-btn">Log in</button>
+
+                        <!-- Register buttons -->
+                        <div class="text-center">
+                            <p>Not a member? <a href="#!">Register</a></p>
+                            <p>or sign up with:</p>
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-google"></i>
+                            </button>
+
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const userLogin = async(url) => {
+            const userDetails = {};
+            userDetails.loginId = document.getElementById('userd-id').value;
+            userDetails.password = document.getElementById('password').value;
+
+            const payload = {
+                userDetails : userDetails
+            }
+
+            console.log('payload ===>>>>>>', payload);
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then((Response) => {
+                return Response.ok ? Response.json()  : 'Network Response was not okk'
+            })
+            .then((data) => {
+                if(data.status === "Done"){
+                    console.log('data ====>>>>>>>', data);
+                    window.location.href = '<%- BASE_URL %>dashboard';
+                }
+                else {
+                    console.log('Login failed: Unexpected response');
+                }
+            })
+            .catch((error) => {
+                console.log('error ====>>>>>', error);
+            })
+        }
+
+        document.getElementById('login-btn').addEventListener('click', async () => {
+
+            await userLogin('<%- BASE_URL %>user-registration/login')
+
+        });
+
+    </script>
+<%- include('./partials/footer') %>
+<%- include('./partials/footer-end') %>

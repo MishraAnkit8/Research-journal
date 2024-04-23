@@ -34,6 +34,8 @@ const researchProjGrantServices = require('../services/research-project-grant.se
 const conferenceServices = require('../services/conference-publications.service');
 
 
+
+
 const router = express.Router();
 
 router.get('/', asyncErrorHandler(researchController.renderResearch));
@@ -146,6 +148,9 @@ router.get('/pharmacy-seed-grant-form', asyncErrorHandler(pharmacySeedGrantForm.
 //insert external faculty details controller
 
 router.post('/external/faculty-insert', asyncErrorHandler(facultyController.insertExternalFacultyDetails));
+
+// userController
+
 
 
 

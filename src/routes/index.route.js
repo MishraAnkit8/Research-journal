@@ -7,6 +7,7 @@ const meetingStackholdersRoute = require('./meeting-stackholders.route');
 const brandingAndAdvertisingRoute = require('./branding-advertising.route');
 const chronicleRoutes = require('./chronicle-edition.route');
 const chroniclePageRoutes = require('./chronicle-page-routes');
+const userRegistrationRoutes = require('./user-registration.routes');
 
 const router = express.Router();
 
@@ -17,5 +18,6 @@ router.use('/meeting-stackholders' , meetingStackholdersRoute);
 router.use('/branding-advertising' , brandingAndAdvertisingRoute);
 router.use('/chronicle-edition' , chronicleRoutes);
 router.use('/chronicle-page' , chroniclePageRoutes);
+router.use('/user-registration' , userRegistrationRoutes);
 
 module.exports = router;
