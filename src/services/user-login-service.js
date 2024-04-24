@@ -1,5 +1,5 @@
 
-const facultyModels = require('../models/user-registration');
+const facultyModels = require('../models/user-login-models');
 
 const authorPassword = require('../../utils/auth');
 

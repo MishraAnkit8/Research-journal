@@ -5,6 +5,10 @@ module.exports.authMiddleware = async (req, res, next) => {
     console.log("INSIDE::::::::::::", req.cookies.session);
     const sessionid = req.cookies.session;
 
+    if(!sessionid || sessionid == 'undefined'){
+        res.redirect('/user');
+    }
+
     let sessionData = await getRedisData(`${sessionid}:session`)
     console.log("sessionDataL::::::::", sessionData);
     try {

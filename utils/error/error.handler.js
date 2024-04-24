@@ -45,8 +45,9 @@ module.exports.notFoundError = ({ type, moduleName, status, message, httpStatus,
 }
 
 module.exports.internalServerError = ({ type, moduleName, status, message, httpStatus, data }) => {
+    console.log('type ===>>>>>')
     throw new CustomError({
-        type: type || '',
+        type: type || 'undefined',
         moduleName: moduleName || 'Unknown Module',
         status: status || '',
         message: message || 'Internal Server Error',

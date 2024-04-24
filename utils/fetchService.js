@@ -2,6 +2,8 @@ const fetch = require('node-fetch');
 
 module.exports = {
     async serverFetch(url, options) {
+      console.log('url in fetch service ====>>>>>', url);
+      console.log('options in fetch service ====>>>>>>>', options)
         try {
             const response = await fetch(url, options);
             console.log("response : ",response);
@@ -13,6 +15,8 @@ module.exports = {
             response.headers.forEach((value, name) => {
               headers[name] = value;
             });
+
+            console.log('headers in fetchService ==>>>>>>>', headers);
         
             const contentType = response.headers.get('content-type');
             let responseBody;

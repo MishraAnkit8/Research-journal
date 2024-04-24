@@ -388,7 +388,7 @@ document.querySelector('#login-btn').addEventListener('click',async function(e){
         password
     }
 
-    dynamicFetch('<%- BASE_URL %>login-page/login', 'POST', obj)
+    dynamicFetch('<%- BASE_URL %>user/login', 'POST', obj)
             .then(data => {
                 console.log('POST request successful:', data);
                 if (data.redirect.includes('dashboard')) {
