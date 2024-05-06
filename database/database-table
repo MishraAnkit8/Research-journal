@@ -1307,6 +1307,758 @@ GROUP BY
     jaf.impact_factor
 ORDER BY
     jpa.id;
+
+
+
+ALTER TABLE journal_paper_article
+ADD COLUMN created_by VARCHAR(50); 
+alter tab
+ALTER TABLE journal_paper_article
+add COLUMN active BOOLEAN NOT NULL DEFAULT(true) ;
+
+UPDATE journal_paper_article
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+
+ALTER TABLE journal_paper_article
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE journal_paper_article
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+book_chapter_publications
+ALTER TABLE book_chapter_publications
+ADD COLUMN created_by VARCHAR(50);
+
+ALTER TABLE book_chapter_publications
+add COLUMN active BOOLEAN NOT NULL DEFAULT(true) ;
+
+
+UPDATE book_chapter_publications
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE book_chapter_publications
+ALTER COLUMN created_by SET NOT NULL;
+
+ALTER TABLE book_chapter_publications
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+book_publications
+ALTER TABLE book_publications
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE book_publications
+add COLUMN active BOOLEAN NOT NULL DEFAULT(true) ;
+
+
+UPDATE book_publications
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE book_publications
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE book_publications
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+branding_and_advertising
+ALTER TABLE branding_and_advertising
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE branding_and_advertising
+add COLUMN active BOOLEAN NOT NULL DEFAULT(true) ;
+
+
+UPDATE branding_and_advertising
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE branding_and_advertising
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE branding_and_advertising
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+case_studies
+ALTER TABLE case_studies
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE case_studies
+add COLUMN active BOOLEAN NOT NULL DEFAULT(true) ;
+
+
+UPDATE case_studies
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE case_studies
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE case_studies
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+vc_editor_table
+ALTER TABLE vc_editor_table
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE vc_editor_table
+add COLUMN active BOOLEAN NOT NULL DEFAULT(true) ;
+
+
+UPDATE vc_editor_table
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE vc_editor_table
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE vc_editor_table
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+research_editor_table
+ALTER TABLE research_editor_table
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE research_editor_table
+add COLUMN active BOOLEAN NOT NULL DEFAULT(true) ;
+
+
+UPDATE research_editor_table
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE research_editor_table
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE research_editor_table
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+ALTER TABLE meeting_editor_table
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE meeting_editor_table
+add COLUMN active BOOLEAN NOT NULL DEFAULT(true) ;
+
+
+UPDATE meeting_editor_table
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE meeting_editor_table
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE meeting_editor_table
+ADD COLUMN updated_by VARCHAR(50); 
+
+-- =============================================================================
+
+ALTER TABLE branding_editor_table
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE branding_editor_table
+add COLUMN active BOOLEAN NOT NULL DEFAULT(true) ;
+
+
+UPDATE branding_editor_table
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE branding_editor_table
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE branding_editor_table
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ ALTER TABLE conference_presentation
+ADD COLUMN created_by VARCHAR(50); 
+select * from conference_presentation
+
+ALTER TABLE conference_presentation
+add COLUMN active BOOLEAN NOT NULL DEFAULT(true) ;
+
+UPDATE conference_presentation
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE conference_presentation
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE conference_presentation
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ALTER TABLE e_content_development
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE e_content_development
+ADD COLUMN active BOOLEAN;
+
+
+UPDATE e_content_development
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE e_content_development
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE e_content_development
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ALTER TABLE edited_book_publications
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE edited_book_publications
+ADD COLUMN active BOOLEAN;
+
+
+UPDATE edited_book_publications
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE edited_book_publications
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE edited_book_publications
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ALTER TABLE IPR
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE IPR
+ADD COLUMN active BOOLEAN;
+
+
+UPDATE IPR
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE IPR
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE IPR
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ALTER TABLE meeting_stackholders
+ADD COLUMN created_by VARCHAR(50);
+
+ALTER TABLE meeting_stackholders
+ADD COLUMN active BOOLEAN;
+
+
+UPDATE meeting_stackholders
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE meeting_stackholders
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE meeting_stackholders
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ALTER TABLE consultancy_approval_form
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE consultancy_approval_form
+ADD COLUMN active BOOLEAN;
+
+
+UPDATE consultancy_approval_form
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE consultancy_approval_form
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE consultancy_approval_form
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ALTER TABLE nmims_seed_grant_non_formacy
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE nmims_seed_grant_non_formacy
+ADD COLUMN active BOOLEAN;
+
+
+UPDATE nmims_seed_grant_non_formacy
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE nmims_seed_grant_non_formacy
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE nmims_seed_grant_non_formacy
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ALTER TABLE patent_submission_grant
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE patent_submission_grant
+ADD COLUMN active BOOLEAN;
+
+
+UPDATE patent_submission_grant
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE patent_submission_grant
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE patent_submission_grant
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ALTER TABLE research_award
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE research_award
+ADD COLUMN active BOOLEAN;
+
+UPDATE research_award
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE research_award
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE research_award
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ALTER TABLE research_project_grant
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE research_project_grant
+ADD COLUMN active BOOLEAN;
+
+
+UPDATE research_project_grant
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE research_project_grant
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE research_project_grant
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ALTER TABLE research_seminars
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE research_seminars
+ADD COLUMN active BOOLEAN;
+
+
+UPDATE research_seminars
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE research_seminars
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE research_seminars
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+
+ALTER TABLE teaching_execellance
+ADD COLUMN created_by VARCHAR(50); 
+
+ALTER TABLE teaching_execellance
+ADD COLUMN active BOOLEAN;
+
+
+UPDATE teaching_execellance
+SET created_by = 'Unknown'
+WHERE created_by IS NULL;
+
+ALTER TABLE teaching_execellance
+ALTER COLUMN created_by SET NOT NULL;
+
+
+ALTER TABLE teaching_execellance
+ADD COLUMN updated_by VARCHAR(50); 
+-- =============================================================================
+SELECT
+                    jpa.id AS article_id,
+                    jpa.title_of_paper,
+                    jpa.created_by AS created_by,
+                    
+                    jpa.total_authors,
+                    jpa.count_other_faculty,
+                    jpa.nmims_authors_count,
+                    jpa.journal_name,
+                    jpa.publisher,
+                    jpa.pages,
+                    jpa.issn_no,
+                    jpa.uid,
+                    jpa.year,
+                    jpa.jorunal_article_type_id,
+                    jpa.date_of_publishing,
+                    jpa.scs_cite_score,
+                    jpa.scs_indexed,
+                    jpa.abdc_indexed,
+                    jpa.gs_index,
+                    jpa.wos_indexed,
+                    jpa.ugc_indexed,
+                    jpa.web_link_doi_number,
+                    string_agg(DISTINCT jaf.impact_factor, ', ') AS impact_factors,
+                    string_agg(DISTINCT jaf.id::text, ', ') AS impact_factors_ids,
+                    string_agg(DISTINCT sd.documents_name, ', ') AS supporting_documents,
+                    string_agg(DISTINCT sd.id::text, ', ') AS supporting_documents_ids,
+                    string_agg(DISTINCT pc.cadre_name, ', ') AS policy_cadre,
+                    string_agg(DISTINCT pc.id::text, ', ') AS policy_cadre_ids,
+                    string_agg(DISTINCT f.faculty_name, ', ') AS internal_faculty_names,
+                    string_agg(DISTINCT f.id::text, ', ') AS nmims_facilty_id,
+                    string_agg(DISTINCT a.faculty_name, ', ') AS all_article_authors_names,
+                    string_agg(DISTINCT a.id::text, ', ') AS articles_faculties_ids,
+                    string_agg(DISTINCT ns.school_name, ', ') AS associated_schools,
+                    string_agg(DISTINCT ns.id::text, ', ') AS school_id,
+                    string_agg(DISTINCT nc.campus_name, ', ') AS associated_campuses,
+                    string_agg(DISTINCT nc.id::text, ', ') AS campus_id
+                FROM
+                    journal_paper_article jpa
+                LEFT JOIN
+                    journal_article_school jas ON jpa.id = jas.journal_article_id
+                LEFT JOIN
+                    nmims_school ns ON jas.school_id = ns.id
+                LEFT JOIN
+                    journal_article_campus jac ON jpa.id = jac.journal_article_id
+                LEFT JOIN
+                    nmims_campus nc ON jac.campus_id = nc.id
+                LEFT JOIN
+                    journal_article_impact_factor jaif ON jpa.id = jaif.journal_article_id
+                LEFT JOIN
+                    impact_factor jaf ON jaif.impact_factor_id = jaf.id
+                LEFT JOIN
+                    nmims_faculties nf ON jpa.id = nf.journal_article_id
+                LEFT JOIN
+                    faculties f ON nf.faculty_id = f.id
+                LEFT JOIN
+                    all_article_authors aa ON jpa.id = aa.journal_article_id
+                LEFT JOIN
+                    faculties a ON aa.faculty_id = a.id
+                LEFT JOIN
+                    journal_article_documents jad ON jpa.id = jad.journal_article_id
+                LEFT JOIN
+                    supporting_documents sd ON jad.supporting_documents_id = sd.id
+                LEFT JOIN
+                    journal_article_policy_cadre japc ON jpa.id = japc.journal_article_id
+                LEFT JOIN
+                    policy_cadre pc ON japc.policy_cadre_id = pc.id
+                WHERE 
+                         jpa.id = 66 AND created_by = '32101198'
+                GROUP BY
+                    jpa.id,
+                    jpa.title_of_paper,
+                    jpa.total_authors,
+                    jpa.nmims_authors_count,
+                    jpa.journal_name,
+                    jpa.publisher,
+                    jpa.pages,
+                    jpa.issn_no,
+                    jpa.year,
+                    jpa.jorunal_article_type_id,
+                    jpa.date_of_publishing,
+                    jpa.scs_cite_score,
+                    jpa.scs_indexed,
+                    jpa.abdc_indexed,
+                    jpa.wos_indexed,
+                    jpa.ugc_indexed,
+                    jpa.web_link_doi_number
+					
+					
+					
+select * from employee_table;
+delete from employee_table where employee_name = ''
+
+CREATE TABLE investigator_education (
+    id SERIAL PRIMARY KEY,
+    course_name VARCHAR(255),
+    university_name VARCHAR(255),
+    passout_year Integer
+);
+
+CREATE TABLE investigator_experience (
+    id SERIAL PRIMARY KEY,
+    possition VARCHAR(255),
+    organization_name VARCHAR(255),
+    experience Integer
+);
+
+CREATE TABLE investigator_book (
+    id SERIAL PRIMARY KEY,
+    book_author VARCHAR(255),
+    book_names VARCHAR(255),
+    book_year Integer,
+	book_volume Integer,
+	book_publisher VARCHAR(255),
+	book_isbn Integer
+);
+
+CREATE TABLE investigator_book_chapter (
+    id SERIAL PRIMARY KEY,
+    book_chapter_author VARCHAR(255),
+    book_chapter__title VARCHAR(255),
+    book_chapter_names VARCHAR(255),
+	book_chapter_year Integer,
+	book_chapter_volume Integer,
+	book_chapter_page_number Integer,
+	book_chapter_publisher VARCHAR(255),
+	book_chapter_isbn Integer
+);
+
+CREATE TABLE investigator_patent (
+    id SERIAL PRIMARY KEY,
+    applicant_name VARCHAR(255),
+    patent_title VARCHAR(255),
+    patent_status VARCHAR(255),
+	patent_year Integer
+);
+
+drop table investigator_publication;
+
+CREATE TABLE investigator_publication (
+    id SERIAL PRIMARY KEY,
+    publication_author VARCHAR(255),
+    publication_title VARCHAR(255),
+	publication_jorunal_name VARCHAR(255),
+	publication_issue VARCHAR(255),
+    publication_year Integer,
+	publication_volume Integer,
+	publication_artcile_number Integer,
+	publication_impact_factor VARCHAR(255)
+);
+
+
+CREATE TABLE investigator_research_implementation (
+    id SERIAL PRIMARY KEY,
+    research_im_title VARCHAR(255),
+	research_im_agency VARCHAR(255),
+	research_im_role VARCHAR(255),
+	research_im_duration Integer,
+	research_im_project_cost Integer
+);
+
+CREATE TABLE investigator_research_complete (
+    id SERIAL PRIMARY KEY,
+    research_cm_title VARCHAR(255),
+	research_cm_agency VARCHAR(255),
+	research_cm_role VARCHAR(255),
+	research_cm_duration Integer,
+	research_cm_project_cost Integer
+);
+cell_lines_amount Integer,
+ALTER TABLE pharmacy_seed
+drop COLUMN time_lines Integer;
+
+ALTER TABLE pharmacy_seed
+ADD COLUMN time_lines DATE;
+
+
+ALTER TABLE pharmacy_seed
+ADD COLUMN project_duration DATE;
+
+
+CREATE TABLE pharmacy_seed(
+	id SERIAL PRIMARY KEY,
+	summary_title VARCHAR(255),
+	summary_project_title VARCHAR(255),
+	principle_investigator VARCHAR(255),
+	co_investigator VARCHAR(255),
+	project_duration Integer,
+	total_cost Integer,
+	consumables_amount Integer,
+	analysis_amount Integer,
+	other_amount Integer,
+	project_title VARCHAR(255),
+	project_status VARCHAR(255),
+	scientific_importance VARCHAR(255),
+	project_objectives VARCHAR(255),
+	detailed_methodology VARCHAR(255),
+	time_lines,
+	budget_consumable_amount Integer,
+	consumables_justification VARCHAR(255),
+	solvents_amount Integer,
+	solvents_justification VARCHAR(255),
+	chemicals_amount Integer,
+	chemicals_justification VARCHAR(255),
+	biomarkers_reference_amount Integer,
+	biomarkers_reference_justifications VARCHAR(255),
+	hplc_amount Integer,
+	hplc_justification VARCHAR(255),
+	experimental_animals_amount Integer,
+	experimental_animals_justification VARCHAR(255),
+	cell_lines_amount Integer,
+	cell_lines_justifications VARCHAR(255),
+	kits_analysis_amount Integer,
+	kits_analysis_justifications VARCHAR(255),
+	evaluation_analysis_amount Integer,
+	evaluation_analysis_justification VARCHAR(255),
+	proposed_out_come Integer,
+	previous_project_explaination text,
+	pharmacy_references text,
+	project_background text,
+	hypothesis VARCHAR(50),
+	updated_by VARCHAR(50),
+	created_by VARCHAR(50),
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+	active BOOLEAN NOT NULL DEFAULT(true)
+)
+
+select * from research_seminars;
+
+create table investigator(
+	id SERIAL PRIMARY KEY,
+	investigator_name varchar(255),
+	investigator_dsg varchar(255),
+	investigator_emial varchar(255),
+	investigator_mobile varchar(255),
+	investigator_dob varchar(255),
+	updated_by VARCHAR(50),
+	created_by VARCHAR(50),
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+	active BOOLEAN NOT NULL DEFAULT(true)
+)
+
+create table pharmacy_investigator(
+	id SERIAL PRIMARY KEY,
+	pharmacy_seed_id INTEGER REFERENCES pharmacy_seed(id),
+	investigator_id INTEGER REFERENCES investigator(id),
+	active BOOLEAN NOT NULL DEFAULT(true),
+	updated_by VARCHAR(50),
+	created_by VARCHAR(50),
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
+
+
+create table pharmacy_investigator_education(
+	id SERIAL PRIMARY KEY,
+	pharmacy_seed_id INTEGER REFERENCES pharmacy_seed(id),
+	investigator_education_id INTEGER REFERENCES investigator_education(id),
+	active BOOLEAN NOT NULL DEFAULT(true),
+	updated_by VARCHAR(50),
+	created_by VARCHAR(50),
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
+
+create table pharmacy_investigator_experience(
+	id SERIAL PRIMARY KEY,
+	pharmacy_seed_id INTEGER REFERENCES pharmacy_seed(id),
+	investigator_experience_id INTEGER REFERENCES investigator_experience(id),
+	active BOOLEAN NOT NULL DEFAULT(true),
+	updated_by VARCHAR(50),
+	created_by VARCHAR(50),
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
+
+
+create table pharmacy_investigator_book(
+	id SERIAL PRIMARY KEY,
+	pharmacy_seed_id INTEGER REFERENCES pharmacy_seed(id),
+	investigator_book INTEGER REFERENCES investigator_book(id),
+	active BOOLEAN NOT NULL DEFAULT(true),
+	updated_by VARCHAR(50),
+	created_by VARCHAR(50),
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
+
+
+create table pharmacy_investigator_book_chapter(
+	id SERIAL PRIMARY KEY,
+	pharmacy_seed_id INTEGER REFERENCES pharmacy_seed(id),
+	investigator_book_chapter_id INTEGER REFERENCES investigator_book_chapter(id),
+	active BOOLEAN NOT NULL DEFAULT(true),
+	updated_by VARCHAR(50),
+	created_by VARCHAR(50),
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
+
+
+create table pharmacy_investigator_patent(
+	id SERIAL PRIMARY KEY,
+	pharmacy_seed_id INTEGER REFERENCES pharmacy_seed(id),
+	investigator_patent_id INTEGER REFERENCES investigator_patent(id),
+	active BOOLEAN NOT NULL DEFAULT(true),
+	updated_by VARCHAR(50),
+	created_by VARCHAR(50),
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
+
+
+create table pharmacy_investigator_publication(
+	id SERIAL PRIMARY KEY,
+	pharmacy_seed_id INTEGER REFERENCES pharmacy_seed(id),
+	investigator_publication_id INTEGER REFERENCES investigator_publication(id),
+	active BOOLEAN NOT NULL DEFAULT(true),
+	updated_by VARCHAR(50),
+	created_by VARCHAR(50),
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
+
+
+create table pharmacy_investigator_research_implementation(
+	id SERIAL PRIMARY KEY,
+	pharmacy_seed_id INTEGER REFERENCES pharmacy_seed(id),
+	investigator_research_implementation_id INTEGER REFERENCES investigator_research_implementation(id),
+	active BOOLEAN NOT NULL DEFAULT(true),
+	updated_by VARCHAR(50),
+	created_by VARCHAR(50),
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
+
+
+create table pharmacy_investigator_research_complete(
+	id SERIAL PRIMARY KEY,
+	pharmacy_seed_id INTEGER REFERENCES pharmacy_seed(id),
+	investigator_research_complete_id INTEGER REFERENCES investigator_research_complete(id),
+	active BOOLEAN NOT NULL DEFAULT(true),
+	updated_by VARCHAR(50),
+	created_by VARCHAR(50),
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
+
+
+
 	
 	
 
